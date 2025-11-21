@@ -41,11 +41,9 @@ jobs:
           gemspec
 
           $(if [ "${RAILS_VERSION}" = "main" ]; then
-              echo 'gem "actionpack", github: "rails/rails", branch: "main"'
-              echo 'gem "actionview", github: "rails/rails", branch: "main"'
+              echo 'gem "rails", github: "rails/rails", branch: "main"'
             else
-              echo "gem \"actionpack\", \"~> ${RAILS_VERSION}\""
-              echo "gem \"actionview\", \"~> ${RAILS_VERSION}\""
+              echo "gem \"rails\", \"~> ${RAILS_VERSION}\""
             fi)
 
           gem "rspec-rails"
